@@ -10,9 +10,9 @@ gulp.task('sass', function() {
     .pipe(browserSync.stream());
 });
 
-// Move JS Files to src/js
+// Move JS Files to public/js
 gulp.task('js', function(){
-  return gulp.src(['node_modules/materialize-css/dist/js/materialize.min.js'])
+  return gulp.src(['node_modules/materialize-css/dist/js/materialize.min.js', 'node_modules/jquery/dist/jquery.min.js'])
     .pipe(gulp.dest("public/js"))
     .pipe(browserSync.stream());
 });
@@ -27,13 +27,13 @@ gulp.task('serve', ['sass'], function() {
     gulp.watch("public/*.html").on('change', browserSync.reload);
 });
 
-// Move Fonts Folder to src/fonts
+// Move Fonts Folder to public/fonts
 gulp.task('fonts', function(){
   return gulp.src('node_modules/font-awesome/fonts/*')
     .pipe(gulp.dest("public/fonts"));
 });
 
-// Move Font Awesome CSS to src/css
+// Move Font Awesome CSS to public/css
 gulp.task('fa', function(){
   return gulp.src('node_modules/font-awesome/css/font-awesome.min.css')
     .pipe(gulp.dest("public/css"));
