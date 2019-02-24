@@ -1,0 +1,20 @@
+{
+  "name": "materialize_starter_pack",
+  "version": "1.0.0",
+  "description": "Materialize CSS Starter pack using gulp",
+  "main": "index.js",
+  "scripts": {
+    "start": "gulp"
+  },
+  "author": "Stephen Leachman",
+  "license": "MIT",
+  "devDependencies": {
+    "browser-sync": "^2.18.13",
+    "gulp": "^3.9.1",
+    "gulp-sass": "^3.1.0"
+  },
+  "dependencies": {
+    "font-awesome": "^4.7.0",
+    "materialize-css": "^1.0.0"
+  }
+}
